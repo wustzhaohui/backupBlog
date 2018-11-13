@@ -21,11 +21,11 @@ git push -u origin master //第一次推送
 git push origin master  //第一次推送之后可以直接使用该命令进行文件提交
 
 // 在完成该命令之后会弹出需要登录你自己的git账户，同事需要在远程添加密钥验证，要不然本地文件无法通过验证无法提交
-```  
+```
 
 # 获取代码更新&&拉取代码(以下所有名称无需添加引号)
 
-```git克隆仓库
+``` git克隆仓库
 git clone '仓库地址'  //从远程仓库克隆代码到本地
 git remote // 为了便于管理，Git要求每个远程主机都必须指定一个主机名。
 git remmote -v //查看远程主机名名称
@@ -48,11 +48,11 @@ git pull origin master   //将远程主机名为ORIGIN的MASTER分支合并到�
 git checkout -b newBrach origin/master //在主机名为'origin'的'master'分支创建本地新的分支
 git merge origin/master  //将主机名为origin的分支master与新建的分支合并
 git checkout master //切换本地分支到master
-```  
+```
 
 # 一些实用的git命令
 
-```常用命令
+``` 常用命令
 git status  //查看当前文件的状态 如果有文件改变则会显示出来哪些改变
 git diff -m  //查看哪些文件修改，修改了哪些地方
 git log // 查看git提交版本
@@ -60,4 +60,4 @@ git reset --hard commitCode // 回滚代码到指定版本，版本号未纯字�
 git reset versionCode filepathname // 指定文件至某个版本
 git reset HEAD filepathname // 撤销选中，与git add . 相反
 git checkout . // 丢弃本地所有修改
-```  
+```

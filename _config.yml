@@ -4,10 +4,10 @@
 
 # Site
 title: 重度胡癌患者的博客
-subtitle: 辉辉日常吐槽基地
+subtitle: Talk is cheap, Show me your code
 description: 用来记录我的日常开发与学习，一直进步
 keywords: blog
-author: Hui.zhao
+author: Fred.Zhao
 language: Chinese
 timezone: 
 
@@ -41,7 +41,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
   
 # Home page setting
