@@ -13,6 +13,8 @@ categories:
 
 `input` 的 `type`属性为`number`的时候,该`input`的`value`值的数据类型是`number`,`js`会使用科学计数法。比如如果用户输入的数值为"100000000",`js`会直接转换`10 * 10 ^ 8` 。`js`则会显示数值为`1e8`
 
+<!-- more -->
+
 ## bug：
 
 - `input-type-number`数据类型不匹配的话会无法将数据返回页面。

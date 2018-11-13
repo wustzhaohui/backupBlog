@@ -21,6 +21,8 @@ categories:
 
 * 了解 `node`,了解下[hexo](https://hexo.io/zh-cn/docs/)
 
+<!-- more -->
+
 ## 创建自己的 `username.github.io` 分支
 
 * 当我们去挂网注册完成一个`git`账号之后呢，现在我们就可以登陆到自己的账户了。点击右上角你的头像旁边的那个三角。然乎在下拉之后选择`Your repositories`。你是不是找到了它，使劲的点击然后进入到你的仓库列表。

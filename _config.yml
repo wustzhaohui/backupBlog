@@ -99,3 +99,7 @@ jsonContent:
       excerpt: false
       categories: false
       tags: true
+
+auto_excerpt:
+    enable: true
+    length: 150
