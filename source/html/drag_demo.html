@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="drag-cavanse" id="parent">
+        <div id="drag-box" class="drag-box"></div>
+
+    </div>
+    <script>
+        function drag(dragBox, parent) {
+            if (parent) {
+                parent = document.getElementById(parent);
+            } else {
+                parent = document;
+            };
+            var box = document.getElementById(dragBox);
+            box.addEventListener('touchstart', function (e) {
+                var pWidth = parent.clientWidth;
+                var pHeight = parent.clientHeight;
+                if (e.touches.length == 1) {
+                    e.preventDefault();
+                };
+                var touch = e.targetTouches[0];
+                var disX = touch.clientX - box.offsetLeft;
+                var disY = touch.clientY - box.offsetTop;
+                var oWidth = box.offsetWidth, oHeight = box.offsetHeight;
+                box.addEventListener('touchmove', function (event) {
+                    var touch = event.targetTouches[0];
+                    box.style.left = touch.clientX - disX + 'px';
+                    box.style.top = touch.clientY - disY + 'px';
+
+                    //左侧
+                    if (box.offsetLeft <= 0) {
+                        box.style.left = 0;
+                    };
+                    //右侧
+                    if (box.offsetLeft >= pWidth - oWidth) {
+                        box.style.left = pWidth - oWidth + 'px';
+                    };
+                    //上面
+                    if (box.offsetTop <= 0) {
+                        box.style.top = 0;
+                    };
+                    //下面
+                    if (box.offsetTop >= pHeight - oHeight) {
+                        box.style.top = pHeight - oHeight + 'px';
+                    };
+                });
+
+                box.addEventListener('touchend', function (event) {
+                    // 注意在移除事件的时候要传递两个参数
+                    box.removeEventListener('touchmove', arguments.callee, false);
+                    box.removeEventListener('touchend', arguments.callee, false);
+                })
+            });
+        }
+        drag('drag-box', 'parent');
+
+    </script>
+    <style>
+        .drag-cavanse {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+        }
+
+        .drag-box {
+            position: absolute;
+            background: #000;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</body>
+
+</html>
