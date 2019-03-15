@@ -11,6 +11,7 @@ categories:
 # 什么是`vueRouter`？
 
 ## 以下是引用`vueRouter`官方解释
+
 > Vue Router 是 Vue.js 官方的路由管理器。它和 Vue.js 的核心深度集成，让构建单页面应用变得易如反掌。包含的功能有：
 > - 嵌套的路由/视图表
 > - 模块化的、基于组件的路由配置
@@ -20,6 +21,8 @@ categories:
 > - 带有自动激活的 `CSS class` 的链接
 > - HTML5 历史模式或 hash 模式，在 IE9 中自动降级
 > - 自定义的滚动条行为
+
+<!-- more -->
 
 ## 如何使用？
 
@@ -74,10 +77,11 @@ export default [
 然后在入口文件中去引入即可
 
 * 最后在Vue实例上去使用即可
+
 ```使用vueRouter
-new Vue({
-  router
-}).$mount('#app')
+    new Vue({
+      router
+    }).$mount('#app');
 ```
 ### vue-router路由传参
 
