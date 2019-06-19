@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 重度胡癌患者的博客
+title: 重度胡癌患者的BLOG
 subtitle: WELCOME TO HUI'S BLOG
 description: 学习就会变得充实，一直学习一直充实
-keywords: blog
+keywords: blog,vue,angular,nginx,mysql
 author: Fred.Zhao
 language: Chinese
 timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.fullmastach.club/
+url: https://blog.fullmastach.club/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -74,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: backup-hexo-theme-yilia
+theme: anatole
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -104,3 +104,9 @@ jsonContent:
       excerpt: false
       categories: false
       tags: true
+
+archive_generator:
+  per_page: 0  
+  yearly: false
+  monthly: false
+  daily: false

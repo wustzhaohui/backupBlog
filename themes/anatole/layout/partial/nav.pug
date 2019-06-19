@@ -1,0 +1,26 @@
+.page-top.animated.fadeInDown
+  .nav
+    li
+      if is_home()
+        a.current(href="/")= __('首页')					
+      else
+        a(href="/")= __('首页')	
+    li
+      if is_current('web前端')
+        a.current(href="/categories/web前端")= __('前端')			
+      else
+        a(href="/categories/web前端")= __('前端')
+    li
+      if is_archive()
+        a.current(href="/archives")= __('时间轴')
+      else
+        a(href="/archives")= __('时间轴')	
+  .information
+    .back_btn
+      li
+        if is_post()
+          a.fa.fa-chevron-left(onclick="window.history.go(-1)") 
+        else
+          a.fa.fa-chevron-left(onclick="window.history.go(-1)",style="display:none;") 
+    .avatar
+      img(src=theme.avatar)
