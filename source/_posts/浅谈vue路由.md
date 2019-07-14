@@ -50,7 +50,8 @@ import VueRouter from 'vue-router';
 * 官网写法
 
 ```路由文件
-import index from ${path}
+import index from ${path};
+const index = resolve => require([${path}], resolve); // 异步写法，推荐提高性能
 // path为你的页面/组件地址
 const router = new VueRouter({
     [{
@@ -65,7 +66,8 @@ const router = new VueRouter({
 自定义一个`routers.js`文件
 
 ```如下写法
-import index from `${path}`
+import index from `${path}`;
+const index = resolve => require([${path}], resolve); // 异步写法，推荐提高性能
 export default [
     {
         name: 'index',
